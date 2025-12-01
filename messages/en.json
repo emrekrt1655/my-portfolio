@@ -82,5 +82,26 @@
             "languages": "German (B2-C1), English (C1), Turkish (native)"
         },
         "interests": "Cycling, Football, Cooking, Stand-up paddling"
+    },
+    "ContactPage": {
+        "title": "Get In Touch",
+        "subtitle": "Have a project in mind or just want to say hello? Feel free to reach out!",
+        "contactInfoTitle": "Contact Information",
+        "contactInfoDescription": "Feel free to contact me through any of these channels. I'm always open to discussing new projects, creative ideas, or opportunities.",
+        "socialLinksTitle": "Follow Me",
+        "availabilityTitle": "Current Status",
+        "availabilityText": "Open to new opportunities and collaborations",
+        "formTitle": "Send a Message",
+        "nameLabel": "Your Name",
+        "namePlaceholder": "John Doe",
+        "emailLabel": "Your Email",
+        "emailPlaceholder": "john@example.com",
+        "subjectLabel": "Subject",
+        "subjectPlaceholder": "Project Inquiry",
+        "messageLabel": "Message",
+        "messagePlaceholder": "Tell me about your project...",
+        "sendButton": "Send Message",
+        "sendingButton": "Sending...",
+        "successMessage": "Thank you! Your message has been sent successfully."
     }
 }

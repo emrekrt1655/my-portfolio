@@ -82,5 +82,26 @@
       "languages": "Deutsch (B2-C1), Englisch (C1), Türkisch (Muttersprache)"
     },
     "interests": "Radfahren, Fußball, Kochen, Stand-up-Paddeln"
+  },
+  "ContactPage": {
+    "title": "Kontakt aufnehmen",
+    "subtitle": "Haben Sie ein Projekt im Kopf oder möchten einfach nur Hallo sagen? Melden Sie sich gerne!",
+    "contactInfoTitle": "Kontaktinformationen",
+    "contactInfoDescription": "Kontaktieren Sie mich gerne über einen dieser Kanäle. Ich bin immer offen für Gespräche über neue Projekte, kreative Ideen oder Möglichkeiten.",
+    "socialLinksTitle": "Folgen Sie mir",
+    "availabilityTitle": "Aktueller Status",
+    "availabilityText": "Offen für neue Möglichkeiten und Zusammenarbeit",
+    "formTitle": "Nachricht senden",
+    "nameLabel": "Ihr Name",
+    "namePlaceholder": "Max Mustermann",
+    "emailLabel": "Ihre E-Mail",
+    "emailPlaceholder": "max@beispiel.de",
+    "subjectLabel": "Betreff",
+    "subjectPlaceholder": "Projektanfrage",
+    "messageLabel": "Nachricht",
+    "messagePlaceholder": "Erzählen Sie mir von Ihrem Projekt...",
+    "sendButton": "Nachricht senden",
+    "sendingButton": "Wird gesendet...",
+    "successMessage": "Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet."
   }
 }
