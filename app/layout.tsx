@@ -12,9 +12,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Emre Kurt - Portfolio",
-  description: "Frontend-focused Full Stack Developer",
+export const metadata = {
+  title: "Emre.dev | Portfolio",
+  description: "Frontend Developer Portfolio by Emre",
 };
 
 export default function RootLayout({
@@ -23,10 +23,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+     <html lang="en">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+        />
+      </head>
+      <body className="bg-gray-50 text-gray-900">
         {children}
       </body>
     </html>
