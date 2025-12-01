@@ -17,40 +17,27 @@ const Hero = () => {
   const pathname = usePathname();
   const currentLocale = pathname.split("/")[1] || "en";
 
-  // Tech stack ikonları (public/icons içine eklenebilir)
-  const techs = [
-    { name: "React", src: "/icons/react.svg" },
-    { name: "Next.js", src: "/icons/nextjs.svg" },
-    { name: "Vue.js", src: "/icons/vue.svg" },
-    { name: "TypeScript", src: "/icons/typescript.svg" },
-    { name: "Tailwind", src: "/icons/tailwind.svg" },
-    { name: "Node.js", src: "/icons/nodejs.svg" },
-  ];
-
   return (
-    <section className="flex flex-col items-center justify-center min-h-[90vh] px-6 text-center bg-gradient-to-b from-white to-gray-50">
-      <div className="mb-6">
+    <section className="flex flex-col items-center justify-center min-h-screen px-6 text-center bg-linear-to-b from-white to-gray-50">
+      <div className="mb-6 w-[200px] h-[200px] rounded-full overflow-hidden border-4 hover:border-indigo-600 shadow-lg">
         <Image
-          src="/images/emre.jpg"
+          src="/images/emrekurt.png"
           alt="Emre Kurt"
           width={140}
           height={140}
-          className="rounded-full shadow-lg border-4 border-indigo-600"
+          className="object-cover w-full h-full"
         />
       </div>
 
-      {/* Başlıklar */}
       <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-3">
         {t("greeting")} <span className="text-indigo-600">{t("name")}</span>
       </h1>
       <h2 className="text-2xl md:text-3xl text-gray-700 mb-5">{t("title")}</h2>
 
-      {/* Açıklama */}
       <p className="max-w-2xl text-gray-600 mb-8 leading-relaxed">
         {t("description")}
       </p>
 
-      {/* Butonlar */}
       <div className="flex gap-4 mb-10">
         <Link
           href={`/${currentLocale}#projects`}
@@ -100,7 +87,6 @@ const Hero = () => {
               className={`${tech.class} hover:scale-125 transition-transform duration-300 cursor-pointer`}
             ></i>
 
-            {/* Tooltip */}
             <span className="absolute bottom-[-30px] bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
               {tech.name}
             </span>
@@ -108,22 +94,21 @@ const Hero = () => {
         ))}
       </div>
 
-      {/* Sosyal medya ikonları */}
       <div className="flex mt-10 gap-6 text-gray-600">
         <Link href="https://github.com/emrekrt1655" target="_blank">
-          <Github size={24} className="hover:text-indigo-600 transition" />
+          <Github size={24} className="text-indigo-600 transition" />
         </Link>
         <Link href="https://www.linkedin.com/in/emrekrt16/" target="_blank">
-          <Linkedin size={24} className="hover:text-indigo-600 transition" />
+          <Linkedin size={24} className="text-indigo-600 transition" />
         </Link>
         <Link href="https://medium.com/@emrekrt16" target="_blank">
           <MessageSquareText
             size={24}
-            className="hover:text-indigo-600 transition"
+            className="text-indigo-600 transition"
           />
         </Link>
         <Link href="mailto:emrekurtt1655@gmail.com">
-          <Mail size={24} className="hover:text-indigo-600 transition" />
+          <Mail size={24} className="text-indigo-600 transition" />
         </Link>
       </div>
     </section>
