@@ -1,0 +1,10 @@
+{
+  "Components": {
+    "Navbar": {
+      "Home": "Startseite",
+      "About": "Über mich",
+      "Projects": "Projekte",
+      "Contact": "Kontakt"
+    }
+  }
+}
