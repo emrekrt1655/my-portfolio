@@ -2,11 +2,10 @@ import { NextIntlClientProvider } from "next-intl";
 import { ReactNode } from "react";
 import { notFound } from "next/navigation";
 import { getMessages } from "next-intl/server";
-import RootLayout from "../layout";
-import Navbar from "../components/Navbar";
+import Navbar from "@/app/components/Navbar";
 
 export function generateStaticParams() {
-  return [{ locale: "de" }, { locale: "tr" }, { locale: "en" }];
+  return [{ locale: "de" }, { locale: "en" }];
 }
 
 export default async function LocaleLayout({ children, params }: { children: ReactNode; params: any }) {
@@ -21,15 +20,9 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   }
 
   return (
-    <html lang={locale}>
-      <body>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <RootLayout>
-            <Navbar />
-            {children}
-          </RootLayout>
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider locale={locale} messages={messages}>
+      <Navbar />
+      {children}
+    </NextIntlClientProvider>
   );
 }

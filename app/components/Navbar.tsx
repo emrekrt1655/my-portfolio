@@ -20,9 +20,9 @@ const Navbar = () => {
 
   const navLinks = [
     { name: t("Home"), href: "/" },
-    { name: t("About"), href: "#about" },
-    { name: t("Projects"), href: "#projects" },
-    { name: t("Contact"), href: "#contact" },
+    { name: t("About"), href: "/about" },
+    { name: t("Projects"), href: "/projects" },
+    { name: t("Contact"), href: "/contact" },
   ];
 
   return (

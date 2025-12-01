@@ -12,7 +12,74 @@
       "title": "Frontend-orientierter Full-Stack-Entwickler",
       "description": "Ich entwickle skalierbare, wartbare und benutzerzentrierte Webanwendungen mit modernen Technologien wie React, Next.js und Vue. Leidenschaftlich für sauberen Code, Performance und intuitives Design.",
       "viewProjects": "Projekte ansehen",
-      "downloadCV": "Lebenslauf herunterladen"
+      "downloadCV": "Lebenslauf herunterladen",
+      "connectWithMe": "Verbinde dich mit mir",
+      "techStack": "Technologie-Stack"
     }
+  },
+  "AboutPage": {
+    "title": "Über mich",
+    "subtitle": "Full-Stack-Entwickler",
+    "description": "Innovativer und nutzerorientierter Full-Stack-Entwickler mit über 3 Jahren Berufserfahrung im Aufbau skalierbarer und wartbarer Webanwendungen. Mein Schwerpunkt liegt auf Frontend-Entwicklung mit modernen Frameworks wie React und Vue.js, mit starker Expertise in TypeScript, komponentenbasierter Architektur und UI-Performance-Optimierung.",
+    "workExperienceTitle": "Berufserfahrung",
+    "educationTitle": "Ausbildung",
+    "certificationsTitle": "Zertifikate",
+    "skillsTitle": "Technische Fähigkeiten",
+    "interestsTitle": "Interessen",
+    "workExperiences": [
+      {
+        "role": "Softwareentwickler",
+        "company": "DialogData GmbH & Co. KG",
+        "location": "München",
+        "duration": "März 2023 – April 2025",
+        "description": "Entwicklung moderner Webanwendungen mit React.js, Next.js, Vue.js, Stencil.js. Wiederverwendbare Komponenten erstellt, Performance mit useMemo und useCallback optimiert, Backend-APIs mit Django und Symfony integriert und automatisierte Tests mit Playwright implementiert."
+      },
+      {
+        "role": "Softwareentwickler",
+        "company": "Milon Industries GmbH",
+        "location": "Augsburg",
+        "duration": "Okt 2021 – März 2022",
+        "description": "Full-Stack-Entwicklung mit React (TypeScript) und Node.js. MySQL-Datenbanken mit Prisma ORM verwaltet, Frontend-UI mit Hooks und funktionalen Komponenten entwickelt und E2E-Tests mit Cypress automatisiert."
+      },
+      {
+        "role": "Full-Stack-Entwickler (Praktikum)",
+        "company": "Clarusway IT Training",
+        "location": "Remote",
+        "duration": "Mai 2020 – Feb 2021",
+        "description": "Entwicklung dynamischer Web- und Mobile-Anwendungen mit React, React Native, Node.js, Django. Anwendung der Scrum-Methodik und Zusammenarbeit in agilen Teams."
+      }
+    ],
+    "education": [
+      {
+        "degree": "Berufsausbildung in Digitalisierung",
+        "school": "Technische Hochschule Ingolstadt",
+        "duration": "Sep 2020 – Juli 2022"
+      },
+      {
+        "degree": "B.A. in Internationale Beziehungen",
+        "school": "Uludağ Universität",
+        "duration": "Sep 2013 – Juni 2017"
+      }
+    ],
+    "certifications": [
+      "Cypress Modern Automation – Udemy",
+      "Playwright Testing – Udemy",
+      "Docker from A to Z – Udemy",
+      "Agile Software Development – University of Minnesota",
+      "Responsive Design – University of Michigan (Coursera)",
+      "Vue.js 3 + Pinia – Udemy",
+      "Angular - The Complete Guide",
+      "TELC Deutsch B2 Zertifikat"
+    ],
+    "skills": {
+      "frontend": "React.js, Vue.js, Next.js, Tailwind, SCSS",
+      "backend": "Node.js, Django, Symfony",
+      "databases": "PostgreSQL, MySQL, MongoDB, Prisma ORM",
+      "testing": "Cypress, Playwright, Jest, Vitest, React Testing Library",
+      "tools": "Docker, Git, CI/CD (GitHub Actions), Jira, Agile/Scrum",
+      "state": "Redux, TanStack Query, Pinia",
+      "languages": "Deutsch (B2-C1), Englisch (C1), Türkisch (Muttersprache)"
+    },
+    "interests": "Radfahren, Fußball, Kochen, Stand-up-Paddeln"
   }
 }

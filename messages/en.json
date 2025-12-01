@@ -12,7 +12,74 @@
             "title": "Frontend-focused Full Stack Developer",
             "description": "I craft scalable, maintainable, and user-centric web applications using modern technologies like React, Next.js, and Vue. Passionate about clean code, performance, and intuitive design.",
             "viewProjects": "View Projects",
-            "downloadCV": "Download CV"
+            "downloadCV": "Download CV",
+            "connectWithMe": "Connect with Me",
+            "techStack": "Tech Stack"
         }
+    },
+    "AboutPage": {
+        "title": "About Me",
+        "subtitle": "Full Stack Developer",
+        "description": "Innovative and user-focused Full Stack Developer with 3+ years of professional experience building scalable and maintainable web applications. My main focus is on frontend development using modern frameworks like React and Vue.js, with strong expertise in TypeScript, component-based architecture, and UI performance optimization.",
+        "workExperienceTitle": "Work Experience",
+        "educationTitle": "Education",
+        "certificationsTitle": "Certifications",
+        "skillsTitle": "Technical Skills",
+        "interestsTitle": "Interests",
+        "workExperiences": [
+            {
+                "role": "Software Developer",
+                "company": "DialogData GmbH & Co. KG",
+                "location": "Munich",
+                "duration": "March 2023 – April 2025",
+                "description": "Architected and developed modern web applications utilizing React.js, Next.js, Vue.js, Stencil.js. Built reusable components, optimized performance with useMemo and useCallback, integrated backend APIs with Django and Symfony, and implemented automated tests using Playwright."
+            },
+            {
+                "role": "Software Developer",
+                "company": "Milon Industries GmbH",
+                "location": "Augsburg",
+                "duration": "Oct 2021 – March 2022",
+                "description": "Executed full-stack development using React (TypeScript) and Node.js. Managed MySQL databases with Prisma ORM, developed frontend UI with hooks and functional components, and automated E2E tests with Cypress."
+            },
+            {
+                "role": "Full Stack Developer (Internship)",
+                "company": "Clarusway IT Training",
+                "location": "Remote",
+                "duration": "May 2020 – Feb 2021",
+                "description": "Developed dynamic web and mobile applications using React, React Native, Node.js, Django. Applied Scrum methodology and collaborated in agile teams."
+            }
+        ],
+        "education": [
+            {
+                "degree": "Professional IT Training in Digitalization",
+                "school": "Technical University of Ingolstadt",
+                "duration": "Sep 2020 – July 2022"
+            },
+            {
+                "degree": "B.A. in International Relations",
+                "school": "Uludag University",
+                "duration": "Sep 2013 – June 2017"
+            }
+        ],
+        "certifications": [
+            "Cypress Modern Automation – Udemy",
+            "Playwright Testing – Udemy",
+            "Docker from A to Z – Udemy",
+            "Agile Software Development – University of Minnesota",
+            "Responsive Design – University of Michigan (Coursera)",
+            "Vue.js 3 + Pinia – Udemy",
+            "Angular - The Complete Guide",
+            "TELC German B2 Certificate"
+        ],
+        "skills": {
+            "frontend": "React.js, Vue.js, Next.js, Tailwind, SCSS",
+            "backend": "Node.js, Django, Symfony",
+            "databases": "PostgreSQL, MySQL, MongoDB, Prisma ORM",
+            "testing": "Cypress, Playwright, Jest, Vitest, React Testing Library",
+            "tools": "Docker, Git, CI/CD (GitHub Actions), Jira, Agile/Scrum",
+            "state": "Redux, TanStack Query, Pinia",
+            "languages": "German (B2-C1), English (C1), Turkish (native)"
+        },
+        "interests": "Cycling, Football, Cooking, Stand-up paddling"
     }
 }
