@@ -19,8 +19,8 @@ const Hero = () => {
 
   return (
     <section className="flex flex-col items-center justify-center min-h-screen px-6 text-center bg-gradient-to-b from-white to-gray-50">
-      <Link 
-        className="mb-6 w-[200px] h-[200px] rounded-full overflow-hidden border-4 hover:border-indigo-600 shadow-lg transition-all duration-300 cursor-pointer" 
+      <Link
+        className="mb-6 w-[200px] h-[200px] rounded-full overflow-hidden border-4 hover:border-indigo-600 shadow-lg transition-all duration-300 cursor-pointer"
         href={`/${currentLocale}/about`}
       >
         <Image
@@ -43,28 +43,28 @@ const Hero = () => {
 
       {/* Social Links Section */}
       <div className="flex gap-8 mb-8">
-        <Link 
-          href="https://github.com/emrekrt1655" 
+        <Link
+          href="https://github.com/emrekrt1655"
           target="_blank"
           className="hover:scale-110 transition-transform duration-300 cursor-pointer"
         >
           <Github size={32} className="text-indigo-600" />
         </Link>
-        <Link 
-          href="https://www.linkedin.com/in/emrekrt16/" 
+        <Link
+          href="https://www.linkedin.com/in/emrekrt16/"
           target="_blank"
           className="hover:scale-110 transition-transform duration-300 cursor-pointer"
         >
           <Linkedin size={32} className="text-indigo-600" />
         </Link>
-        <Link 
-          href="https://medium.com/@emrekrt16" 
+        <Link
+          href="https://medium.com/@emrekrt16"
           target="_blank"
           className="hover:scale-110 transition-transform duration-300 cursor-pointer"
         >
           <MessageSquareText size={32} className="text-indigo-600" />
         </Link>
-        <Link 
+        <Link
           href="mailto:emrekurtt1655@gmail.com"
           className="hover:scale-110 transition-transform duration-300 cursor-pointer"
         >
@@ -74,10 +74,10 @@ const Hero = () => {
 
       <div className="flex gap-4 mb-10">
         <Link
-          href={`/${currentLocale}#projects`}
+          href={`/${currentLocale}/about`}
           className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 transition cursor-pointer"
         >
-          {t("viewProjects")}
+          {t("aboutMe")}
         </Link>
         <Link
           href="/Emre_Kurt_CV.pdf"
@@ -85,6 +85,12 @@ const Hero = () => {
           className="border border-indigo-600 text-indigo-600 px-6 py-3 rounded-lg font-medium hover:bg-indigo-50 transition flex items-center gap-2 cursor-pointer"
         >
           <FileText size={18} /> {t("downloadCV")}
+        </Link>
+        <Link
+          href={`/${currentLocale}/projects`}
+          className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 transition cursor-pointer"
+        >
+          {t("viewProjects")}
         </Link>
       </div>
 
@@ -99,7 +105,10 @@ const Hero = () => {
             { class: "devicon-vuejs-plain colored", name: "Vue.js" },
             { class: "devicon-stenciljs-original colored", name: "Stencil.js" },
             { class: "devicon-typescript-plain colored", name: "TypeScript" },
-            { class: "devicon-tailwindcss-plain colored", name: "Tailwind CSS" },
+            {
+              class: "devicon-tailwindcss-plain colored",
+              name: "Tailwind CSS",
+            },
             { class: "devicon-sass-original colored", name: "SCSS / Sass" },
             { class: "devicon-nodejs-plain colored", name: "Node.js" },
             { class: "devicon-express-original colored", name: "Express.js" },
