@@ -5,6 +5,14 @@
       "About": "Über mich",
       "Projects": "Projekte",
       "Contact": "Kontakt"
+    },
+    "Hero": {
+      "greeting": "Hallo, ich bin",
+      "name": "Emre Kurt",
+      "title": "Frontend-orientierter Full-Stack-Entwickler",
+      "description": "Ich entwickle skalierbare, wartbare und benutzerzentrierte Webanwendungen mit modernen Technologien wie React, Next.js und Vue. Leidenschaftlich für sauberen Code, Performance und intuitives Design.",
+      "viewProjects": "Projekte ansehen",
+      "downloadCV": "Lebenslauf herunterladen"
     }
   }
 }

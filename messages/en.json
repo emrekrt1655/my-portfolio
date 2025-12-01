@@ -5,6 +5,14 @@
             "About": "About",
             "Projects": "Projects",
             "Contact": "Contact"
+        },
+        "Hero": {
+            "greeting": "Hi, I'm",
+            "name": "Emre Kurt",
+            "title": "Frontend-focused Full Stack Developer",
+            "description": "I craft scalable, maintainable, and user-centric web applications using modern technologies like React, Next.js, and Vue. Passionate about clean code, performance, and intuitive design.",
+            "viewProjects": "View Projects",
+            "downloadCV": "Download CV"
         }
     }
 }
