@@ -10,7 +10,6 @@ import {
   User,
   FolderOpen,
   MessageCircle,
-  Eye,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -50,7 +49,6 @@ const Hero = () => {
         {t("description")}
       </p>
 
-      {/* Social Links Section */}
       <div className="flex gap-8 mb-8">
         <Link
           href="https://github.com/emrekrt1655"
@@ -82,12 +80,9 @@ const Hero = () => {
       </div>
 
       <div className="relative mt-8 mb-10">
-        {/* Arka plan dekoratif elemanlar */}
         <div className="absolute inset-0 bg-linear-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 blur-3xl -z-10"></div>
 
-        {/* Ana buton container */}
         <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
-          {/* About Me Button */}
           <Link
             href={`/${currentLocale}/about`}
             className="group relative bg-white border-2 border-gray-200 hover:border-indigo-500 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer overflow-hidden"
@@ -102,7 +97,6 @@ const Hero = () => {
             </div>
           </Link>
 
-          {/* Download CV Button */}
           <Link
             href={cvPath}
             target="_blank"
@@ -120,7 +114,6 @@ const Hero = () => {
             <div className="absolute inset-0 bg-white/20 translate-x-[-200%] group-hover:translate-x-[200%] skew-x-12 transition-transform duration-700"></div>
           </Link>
 
-          {/* Projects Button */}
           <Link
             href={`/${currentLocale}/projects`}
             className="group relative bg-white border-2 border-gray-200 hover:border-purple-500 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer overflow-hidden"
@@ -153,7 +146,6 @@ const Hero = () => {
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-linear-to-r from-transparent via-indigo-500 to-transparent rounded-full"></div>
       </div>
 
-      {/* Tech Stack Section */}
       <div className="mt-16">
         <div className="flex flex-wrap justify-center gap-5 text-3xl text-gray-600 max-w-3xl mx-auto">
           {[
