@@ -8,8 +8,9 @@ import {
   FileText,
   MessageSquareText,
   User,
-    FolderOpen,
-    MessageCircle,
+  FolderOpen,
+  MessageCircle,
+  Eye,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -19,6 +20,11 @@ const Hero = () => {
   const t = useTranslations("Components.Hero");
   const pathname = usePathname();
   const currentLocale = pathname.split("/")[1] || "en";
+
+  const cvPath =
+    currentLocale === "de"
+      ? "/cv/Emre_Kurt_Lebenslauf.pdf"
+      : "/cv/Emre_Kurt_CV.pdf";
 
   return (
     <section className="flex flex-col items-center justify-center min-h-screen px-6 text-center bg-linear-to-b from-white to-gray-50">
@@ -76,65 +82,76 @@ const Hero = () => {
       </div>
 
       <div className="relative mt-8 mb-10">
-  {/* Arka plan dekoratif elemanlar */}
-  <div className="absolute inset-0 bg-linear-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 blur-3xl -z-10"></div>
-  
-  {/* Ana buton container */}
-  <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
-    {/* About Me Button */}
-    <Link
-      href={`/${currentLocale}/about`}
-      className="group relative bg-white border-2 border-gray-200 hover:border-indigo-500 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer overflow-hidden"
-    >
-      <div className="absolute inset-0 bg-linear-to-r from-indigo-600 to-indigo-700 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-      <div className="relative flex items-center gap-3 text-gray-700 group-hover:text-white transition-colors duration-300">
-        <User size={20} className="group-hover:rotate-12 transition-transform duration-300" />
-        <span>{t("aboutMe")}</span>
-      </div>
-    </Link>
+        {/* Arka plan dekoratif elemanlar */}
+        <div className="absolute inset-0 bg-linear-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 blur-3xl -z-10"></div>
 
-    {/* Download CV Button */}
-    <Link
-      href="/Emre_Kurt_CV.pdf"
-      target="_blank"
-      className="group relative bg-linear-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl hover:shadow-indigo-500/50 transition-all duration-300 hover:-translate-y-1 cursor-pointer overflow-hidden"
-    >
-      <div className="absolute inset-0 bg-linear-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-      <div className="relative flex items-center gap-3">
-        <FileText size={20} className="group-hover:rotate-12 transition-transform duration-300" />
-        <span>{t("downloadCV")}</span>
-      </div>
-      {/* Parlama efekti */}
-      <div className="absolute inset-0 bg-white/20 translate-x-[-200%] group-hover:translate-x-[200%] skew-x-12 transition-transform duration-700"></div>
-    </Link>
+        {/* Ana buton container */}
+        <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+          {/* About Me Button */}
+          <Link
+            href={`/${currentLocale}/about`}
+            className="group relative bg-white border-2 border-gray-200 hover:border-indigo-500 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer overflow-hidden"
+          >
+            <div className="absolute inset-0 bg-linear-to-r from-indigo-600 to-indigo-700 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+            <div className="relative flex items-center gap-3 text-gray-700 group-hover:text-white transition-colors duration-300">
+              <User
+                size={20}
+                className="group-hover:rotate-12 transition-transform duration-300"
+              />
+              <span>{t("aboutMe")}</span>
+            </div>
+          </Link>
 
-    {/* Projects Button */}
-    <Link
-      href={`/${currentLocale}/projects`}
-      className="group relative bg-white border-2 border-gray-200 hover:border-purple-500 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer overflow-hidden"
-    >
-      <div className="absolute inset-0 bg-linear-to-r from-purple-600 to-pink-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-      <div className="relative flex items-center gap-3 text-gray-700 group-hover:text-white transition-colors duration-300">
-        <FolderOpen size={20} className="group-hover:rotate-12 transition-transform duration-300" />
-        <span>{t("viewProjects")}</span>
-      </div>
-    </Link>
+          {/* Download CV Button */}
+          <Link
+            href={cvPath}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative bg-linear-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl hover:shadow-indigo-500/50 transition-all duration-300 hover:-translate-y-1 cursor-pointer overflow-hidden"
+          >
+            <div className="absolute inset-0 bg-linear-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="relative flex items-center gap-3">
+              <FileText
+                size={20}
+                className="group-hover:rotate-12 transition-transform duration-300"
+              />
+              <span>{t("downloadCV")}</span>
+            </div>
+            <div className="absolute inset-0 bg-white/20 translate-x-[-200%] group-hover:translate-x-[200%] skew-x-12 transition-transform duration-700"></div>
+          </Link>
 
-    <Link
-      href={`/${currentLocale}/contact`}
-      className="group relative bg-white border-2 border-gray-200 hover:border-pink-500 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer overflow-hidden"
-    >
-      <div className="absolute inset-0 bg-linear-to-r from-pink-600 to-rose-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-      <div className="relative flex items-center gap-3 text-gray-700 group-hover:text-white transition-colors duration-300">
-        <MessageCircle size={20} className="group-hover:rotate-12 transition-transform duration-300" />
-        <span>{t("connectWithMe")}</span>
-      </div>
-    </Link>
-  </div>
+          {/* Projects Button */}
+          <Link
+            href={`/${currentLocale}/projects`}
+            className="group relative bg-white border-2 border-gray-200 hover:border-purple-500 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer overflow-hidden"
+          >
+            <div className="absolute inset-0 bg-linear-to-r from-purple-600 to-pink-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+            <div className="relative flex items-center gap-3 text-gray-700 group-hover:text-white transition-colors duration-300">
+              <FolderOpen
+                size={20}
+                className="group-hover:rotate-12 transition-transform duration-300"
+              />
+              <span>{t("viewProjects")}</span>
+            </div>
+          </Link>
 
-  {/* Alt dekoratif çizgi */}
-  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-linear-to-r from-transparent via-indigo-500 to-transparent rounded-full"></div>
-</div>
+          <Link
+            href={`/${currentLocale}/contact`}
+            className="group relative bg-white border-2 border-gray-200 hover:border-pink-500 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer overflow-hidden"
+          >
+            <div className="absolute inset-0 bg-linear-to-r from-pink-600 to-rose-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+            <div className="relative flex items-center gap-3 text-gray-700 group-hover:text-white transition-colors duration-300">
+              <MessageCircle
+                size={20}
+                className="group-hover:rotate-12 transition-transform duration-300"
+              />
+              <span>{t("connectWithMe")}</span>
+            </div>
+          </Link>
+        </div>
+
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-linear-to-r from-transparent via-indigo-500 to-transparent rounded-full"></div>
+      </div>
 
       {/* Tech Stack Section */}
       <div className="mt-16">
