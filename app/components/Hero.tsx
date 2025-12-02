@@ -28,7 +28,7 @@ const Hero = () => {
   return (
     <section className="flex flex-col items-center justify-center min-h-screen px-6 text-center bg-linear-to-b from-white to-gray-50">
       <Link
-        className="mb-6 w-[200px] h-[200px] rounded-full overflow-hidden border-4 hover:border-indigo-600 shadow-lg transition-all duration-300 cursor-pointer"
+        className="mt-20 mb-6 w-[200px] h-[200px] rounded-full overflow-hidden border-4 hover:border-indigo-600 shadow-lg transition-all duration-300 cursor-pointer"
         href={`/${currentLocale}/about`}
       >
         <Image
@@ -146,7 +146,7 @@ const Hero = () => {
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-linear-to-r from-transparent via-indigo-500 to-transparent rounded-full"></div>
       </div>
 
-      <div className="mt-16">
+      <div className="mt-16 mb-16">
         <div className="flex flex-wrap justify-center gap-5 text-3xl text-gray-600 max-w-3xl mx-auto">
           {[
             { class: "devicon-html5-plain colored", name: "HTML5" },
