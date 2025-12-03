@@ -103,5 +103,12 @@
         "sendButton": "Send Message",
         "sendingButton": "Sending...",
         "successMessage": "Thank you! Your message has been sent successfully."
+    },
+    "ProjectsPage": {
+        "title": "Projects",
+        "subtitle": "A selection of my work",
+        "noProjectsMessage": "No projects are currently available. Please check back later.",
+        "backtoProjects": "Back to Projects"
+
     }
 }

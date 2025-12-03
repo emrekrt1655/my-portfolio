@@ -103,5 +103,11 @@
     "sendButton": "Nachricht senden",
     "sendingButton": "Wird gesendet...",
     "successMessage": "Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet."
+  },
+  "ProjectsPage": {
+    "title": "Projekte",
+    "subtitle": "Eine Auswahl meiner Arbeiten",
+    "noProjectsMessage": "Derzeit sind keine Projekte verfügbar. Bitte schauen Sie später wieder vorbei.",
+    "backtoProjects": "Zurück zu den Projekten"
   }
 }
