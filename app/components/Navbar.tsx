@@ -59,7 +59,6 @@ const Navbar = () => {
             isDark ? "text-gray-300" : "text-gray-700"
           }`}
         >
-          <ThemeToggleButton />
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -83,6 +82,7 @@ const Navbar = () => {
             <Globe size={18} />
             {otherLocale.toUpperCase()}
           </Link>
+          <ThemeToggleButton />
         </div>
 
         <button
