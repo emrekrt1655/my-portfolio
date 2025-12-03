@@ -25,7 +25,7 @@ const contributionText = {
   de: "Beiträge sind willkommen! Wenn Sie zu diesem Projekt beitragen möchten, forken Sie bitte das Repository und senden Sie einen Pull-Request mit Ihren vorgeschlagenen Änderungen.",
 };
 
- const projectList: Project[] = [
+const projectList: Project[] = [
   {
     slug: "send-to-future",
     title: "Send to Future",
@@ -78,6 +78,26 @@ const contributionText = {
       "/images/projects/timesheet/4.png",
       "/images/projects/timesheet/5.png",
     ],
+    contributionEnabled: true,
+  },
+  {
+    slug: "chatbot-app",
+    title: "AI Chatbot App",
+    description: {
+      en: "An advanced AI chatbot application built with Next.js, TypeScript, Tailwind CSS, and OpenAI's GPT-4o mini model. The app provides real-time streaming responses — users see messages appear character by character, creating a natural conversation flow. All previous chats are stored for continuity. The sleek, responsive UI ensures a smooth experience across all devices.",
+      de: "Eine fortschrittliche KI-Chatbot-Anwendung, entwickelt mit Next.js, TypeScript, Tailwind CSS und dem GPT-4o mini-Modell von OpenAI. Die App bietet Echtzeit-Streaming-Antworten – Benutzer sehen, wie Nachrichten Zeichen für Zeichen erscheinen, was einen natürlichen Gesprächsfluss schafft. Frühere Chats werden zur Kontinuität gespeichert. Das elegante, responsive UI sorgt für eine reibungslose Nutzung auf allen Geräten.",
+    },
+    image: "/images/projects/ai-chatbot/chatbot.png",
+    githubUrl: "https://github.com/emrekrt1655/chatbot-next",
+    liveUrl: "",
+    techStack: [
+      { name: "React", icon: "devicon-react-original colored" },
+      { name: "Next.js", icon: "devicon-nextjs-original" },
+      { name: "TypeScript", icon: "devicon-typescript-plain colored" },
+      { name: "Tailwind CSS", icon: "devicon-tailwindcss-plain colored" },
+      { name: "OpenAI API", icon: "devicon-openai-plain colored" },
+    ],
+    images: ["/images/projects/ai-chatbot/chatbot1.png"],
     contributionEnabled: true,
   },
 ];
