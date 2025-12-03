@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { Briefcase, GraduationCap, Award, Code, Heart, MapPin, Calendar } from "lucide-react";
+import { useTheme } from "@/app/context/ThemeContext";
 
 type WorkExperience = {
   role: string;
@@ -19,6 +20,8 @@ type Education = {
 
 const AboutPage = () => {
   const t = useTranslations("AboutPage");
+  const { state } = useTheme();
+  const isDark = state.theme === "dark";
 
   const workExperiences = t.raw("workExperiences") as WorkExperience[];
   const educationList = t.raw("education") as Education[];
@@ -35,25 +38,50 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className="min-h-screen mt-6 bg-linear-to-b from-gray-50 to-white py-12 px-6">
+    <div
+      className={`min-h-screen mt-6 py-12 px-6 transition-colors duration-300 ${
+        isDark ? "bg-linear-to-b from-gray-900 to-gray-950" : "bg-linear-to-b from-gray-50 to-white"
+      }`}
+    >
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+          <h1
+            className={`text-5xl md:text-6xl font-bold mb-4 transition-colors duration-300 ${
+              isDark ? "text-gray-100" : "text-gray-900"
+            }`}
+          >
             {t("title")}
           </h1>
-          <h2 className="text-2xl md:text-3xl text-indigo-600 font-semibold mb-6">
+          <h2
+            className={`text-2xl md:text-3xl font-semibold mb-6 transition-colors duration-300 ${
+              isDark ? "text-indigo-400" : "text-indigo-600"
+            }`}
+          >
             {t("subtitle")}
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p
+            className={`text-lg max-w-3xl mx-auto leading-relaxed transition-colors duration-300 ${
+              isDark ? "text-gray-400" : "text-gray-600"
+            }`}
+          >
             {t("description")}
           </p>
         </div>
 
         <section className="mb-16">
           <div className="flex items-center gap-3 mb-8">
-            <Briefcase className="text-indigo-600" size={32} />
-            <h3 className="text-3xl font-bold text-gray-900">
+            <Briefcase
+              className={`transition-colors duration-300 ${
+                isDark ? "text-indigo-400" : "text-indigo-600"
+              }`}
+              size={32}
+            />
+            <h3
+              className={`text-3xl font-bold transition-colors duration-300 ${
+                isDark ? "text-gray-100" : "text-gray-900"
+              }`}
+            >
               {t("workExperienceTitle")}
             </h3>
           </div>
@@ -61,18 +89,34 @@ const AboutPage = () => {
             {workExperiences.map((job, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300"
+                className={`rounded-xl shadow-lg p-6 border transition-all duration-300 ${
+                  isDark
+                    ? "bg-gray-800 border-gray-700 hover:shadow-2xl hover:border-indigo-500"
+                    : "bg-white border-gray-100 hover:shadow-xl hover:border-gray-200"
+                }`}
               >
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-3">
                   <div>
-                    <h4 className="text-xl font-bold text-gray-900 mb-1">
+                    <h4
+                      className={`text-xl font-bold mb-1 transition-colors duration-300 ${
+                        isDark ? "text-gray-100" : "text-gray-900"
+                      }`}
+                    >
                       {job.role}
                     </h4>
-                    <p className="text-indigo-600 font-semibold flex items-center gap-2">
+                    <p
+                      className={`font-semibold flex items-center gap-2 transition-colors duration-300 ${
+                        isDark ? "text-indigo-400" : "text-indigo-600"
+                      }`}
+                    >
                       <span>{job.company}</span>
                     </p>
                   </div>
-                  <div className="mt-2 md:mt-0 text-sm text-gray-500 flex flex-col items-start md:items-end gap-1">
+                  <div
+                    className={`mt-2 md:mt-0 text-sm flex flex-col items-start md:items-end gap-1 transition-colors duration-300 ${
+                      isDark ? "text-gray-400" : "text-gray-500"
+                    }`}
+                  >
                     <span className="flex items-center gap-1">
                       <MapPin size={14} />
                       {job.location}
@@ -83,7 +127,13 @@ const AboutPage = () => {
                     </span>
                   </div>
                 </div>
-                <p className="text-gray-700 leading-relaxed">{job.description}</p>
+                <p
+                  className={`leading-relaxed transition-colors duration-300 ${
+                    isDark ? "text-gray-300" : "text-gray-700"
+                  }`}
+                >
+                  {job.description}
+                </p>
               </div>
             ))}
           </div>
@@ -91,8 +141,17 @@ const AboutPage = () => {
 
         <section className="mb-16">
           <div className="flex items-center gap-3 mb-8">
-            <GraduationCap className="text-indigo-600" size={32} />
-            <h3 className="text-3xl font-bold text-gray-900">
+            <GraduationCap
+              className={`transition-colors duration-300 ${
+                isDark ? "text-indigo-400" : "text-indigo-600"
+              }`}
+              size={32}
+            />
+            <h3
+              className={`text-3xl font-bold transition-colors duration-300 ${
+                isDark ? "text-gray-100" : "text-gray-900"
+              }`}
+            >
               {t("educationTitle")}
             </h3>
           </div>
@@ -100,13 +159,31 @@ const AboutPage = () => {
             {educationList.map((edu, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300"
+                className={`rounded-xl shadow-lg p-6 border transition-all duration-300 ${
+                  isDark
+                    ? "bg-gray-800 border-gray-700 hover:shadow-2xl hover:border-indigo-500"
+                    : "bg-white border-gray-100 hover:shadow-xl hover:border-gray-200"
+                }`}
               >
-                <h4 className="text-lg font-bold text-gray-900 mb-2">
+                <h4
+                  className={`text-lg font-bold mb-2 transition-colors duration-300 ${
+                    isDark ? "text-gray-100" : "text-gray-900"
+                  }`}
+                >
                   {edu.degree}
                 </h4>
-                <p className="text-indigo-600 font-semibold mb-2">{edu.school}</p>
-                <p className="text-sm text-gray-500 flex items-center gap-1">
+                <p
+                  className={`font-semibold mb-2 transition-colors duration-300 ${
+                    isDark ? "text-indigo-400" : "text-indigo-600"
+                  }`}
+                >
+                  {edu.school}
+                </p>
+                <p
+                  className={`text-sm flex items-center gap-1 transition-colors duration-300 ${
+                    isDark ? "text-gray-400" : "text-gray-500"
+                  }`}
+                >
                   <Calendar size={14} />
                   {edu.duration}
                 </p>
@@ -117,22 +194,47 @@ const AboutPage = () => {
 
         <section className="mb-16">
           <div className="flex items-center gap-3 mb-8">
-            <Award className="text-indigo-600" size={32} />
-            <h3 className="text-3xl font-bold text-gray-900">
+            <Award
+              className={`transition-colors duration-300 ${
+                isDark ? "text-indigo-400" : "text-indigo-600"
+              }`}
+              size={32}
+            />
+            <h3
+              className={`text-3xl font-bold transition-colors duration-300 ${
+                isDark ? "text-gray-100" : "text-gray-900"
+              }`}
+            >
               {t("certificationsTitle")}
             </h3>
           </div>
-          <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+          <div
+            className={`rounded-xl shadow-lg p-6 border transition-colors duration-300 ${
+              isDark ? "bg-gray-800 border-gray-700" : "bg-white border-gray-100"
+            }`}
+          >
             <div className="grid md:grid-cols-2 gap-4">
               {certifications.map((cert, idx) => (
                 <div
                   key={idx}
-                  className="flex items-start gap-3 p-3 rounded-lg hover:bg-indigo-50 transition-colors duration-200"
+                  className={`flex items-start gap-3 p-3 rounded-lg transition-colors duration-200 ${
+                    isDark ? "hover:bg-gray-700" : "hover:bg-indigo-50"
+                  }`}
                 >
-                  <div className="mt-1 text-indigo-600">
+                  <div
+                    className={`mt-1 transition-colors duration-300 ${
+                      isDark ? "text-indigo-400" : "text-indigo-600"
+                    }`}
+                  >
                     <Award size={20} />
                   </div>
-                  <p className="text-gray-700">{cert}</p>
+                  <p
+                    className={`transition-colors duration-300 ${
+                      isDark ? "text-gray-300" : "text-gray-700"
+                    }`}
+                  >
+                    {cert}
+                  </p>
                 </div>
               ))}
             </div>
@@ -141,8 +243,17 @@ const AboutPage = () => {
 
         <section className="mb-16">
           <div className="flex items-center gap-3 mb-8">
-            <Code className="text-indigo-600" size={32} />
-            <h3 className="text-3xl font-bold text-gray-900">
+            <Code
+              className={`transition-colors duration-300 ${
+                isDark ? "text-indigo-400" : "text-indigo-600"
+              }`}
+              size={32}
+            />
+            <h3
+              className={`text-3xl font-bold transition-colors duration-300 ${
+                isDark ? "text-gray-100" : "text-gray-900"
+              }`}
+            >
               {t("skillsTitle")}
             </h3>
           </div>
@@ -150,15 +261,27 @@ const AboutPage = () => {
             {skillCategories.map((category) => (
               <div
                 key={category.key}
-                className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl hover:border-indigo-200 transition-all duration-300"
+                className={`rounded-xl shadow-lg p-6 border transition-all duration-300 ${
+                  isDark
+                    ? "bg-gray-800 border-gray-700 hover:shadow-2xl hover:border-indigo-500"
+                    : "bg-white border-gray-100 hover:shadow-xl hover:border-indigo-200"
+                }`}
               >
                 <div className="flex items-center gap-3 mb-3">
                   <span className="text-3xl">{category.icon}</span>
-                  <h4 className="text-lg font-bold text-gray-900">
+                  <h4
+                    className={`text-lg font-bold transition-colors duration-300 ${
+                      isDark ? "text-gray-100" : "text-gray-900"
+                    }`}
+                  >
                     {category.label}
                   </h4>
                 </div>
-                <p className="text-gray-700 text-sm leading-relaxed">
+                <p
+                  className={`text-sm leading-relaxed transition-colors duration-300 ${
+                    isDark ? "text-gray-300" : "text-gray-700"
+                  }`}
+                >
                   {t(`skills.${category.key}`)}
                 </p>
               </div>
@@ -168,13 +291,32 @@ const AboutPage = () => {
 
         <section>
           <div className="flex items-center gap-3 mb-8">
-            <Heart className="text-indigo-600" size={32} />
-            <h3 className="text-3xl font-bold text-gray-900">
+            <Heart
+              className={`transition-colors duration-300 ${
+                isDark ? "text-indigo-400" : "text-indigo-600"
+              }`}
+              size={32}
+            />
+            <h3
+              className={`text-3xl font-bold transition-colors duration-300 ${
+                isDark ? "text-gray-100" : "text-gray-900"
+              }`}
+            >
               {t("interestsTitle")}
             </h3>
           </div>
-          <div className="bg-linear-to-r from-indigo-50 to-purple-50 rounded-xl shadow-lg p-8 border border-indigo-100">
-            <p className="text-gray-700 text-lg leading-relaxed">
+          <div
+            className={`rounded-xl shadow-lg p-8 border transition-colors duration-300 ${
+              isDark
+                ? "bg-linear-to-r from-gray-800 to-gray-750 border-gray-700"
+                : "bg-linear-to-r from-indigo-50 to-purple-50 border-indigo-100"
+            }`}
+          >
+            <p
+              className={`text-lg leading-relaxed transition-colors duration-300 ${
+                isDark ? "text-gray-300" : "text-gray-700"
+              }`}
+            >
               {t("interests")}
             </p>
           </div>
