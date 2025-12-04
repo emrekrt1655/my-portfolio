@@ -96,7 +96,6 @@ export default function ProjectDetailPage() {
           </p>
         </div>
 
-        {/* Action Buttons */}
         <div className="flex flex-wrap gap-4 mb-12">
           {project.githubUrl && (
             <Link
@@ -130,7 +129,6 @@ export default function ProjectDetailPage() {
           )}
         </div>
 
-        {/* Live Demo or Image Carousel */}
         {project.liveUrl ? (
           <div
             className={`rounded-xl overflow-hidden border shadow-lg mb-12 ${
@@ -149,7 +147,6 @@ export default function ProjectDetailPage() {
               isDark ? "border-gray-700" : "border-gray-200"
             }`}
           >
-            {/* Carousel */}
             <div className="relative h-[500px]">
               <Image
                 src={project.images![currentImageIndex]}
@@ -158,7 +155,6 @@ export default function ProjectDetailPage() {
                 className="object-cover"
               />
 
-              {/* Navigation Buttons */}
               {project.images!.length > 1 && (
                 <>
                   <button
@@ -184,7 +180,6 @@ export default function ProjectDetailPage() {
                     <ChevronRight size={24} />
                   </button>
 
-                  {/* Image Indicators */}
                   <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
                     {project.images!.map((_, idx) => (
                       <button
@@ -225,7 +220,6 @@ export default function ProjectDetailPage() {
           </div>
         )}
 
-        {/* Tech Stack */}
         <div className="mb-12">
           <h2
             className={`text-3xl font-bold mb-8 transition-colors duration-300 ${
@@ -265,7 +259,6 @@ export default function ProjectDetailPage() {
           </div>
         </div>
 
-        {/* Contribution Section */}
         {project.githubUrl && project.contributionEnabled !== false && (
           <div
             className={`rounded-xl p-8 border transition-colors duration-300 ${

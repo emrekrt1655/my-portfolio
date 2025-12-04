@@ -16,6 +16,10 @@
             "downloadCV": "Preview CV",
             "connectWithMe": "Connect with Me",
             "techStack": "Tech Stack"
+        },
+        "Footer": {
+            "builtWith": "Built with",
+            "sourceCode": "Source code is available on"
         }
     },
     "AboutPage": {

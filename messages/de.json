@@ -16,6 +16,10 @@
       "downloadCV": "Lebenslauf ansehen",
       "connectWithMe": "Verbinde dich mit mir",
       "techStack": "Technologie-Stack"
+    },
+    "Footer": {
+      "builtWith": "Built with",
+      "sourceCode": "Source code is available on"
     }
   },
   "AboutPage": {

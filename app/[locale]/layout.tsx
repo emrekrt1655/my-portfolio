@@ -3,6 +3,7 @@ import { ReactNode } from "react";
 import { notFound } from "next/navigation";
 import { getMessages } from "next-intl/server";
 import Navbar from "@/app/components/Navbar";
+import { Footer } from "../components/Footer";
 
 export function generateStaticParams() {
   return [{ locale: "de" }, { locale: "en" }];
@@ -23,6 +24,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
     <NextIntlClientProvider locale={locale} messages={messages}>
       <Navbar />
       {children}
+      <Footer />
     </NextIntlClientProvider>
   );
 }
