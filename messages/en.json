@@ -114,5 +114,10 @@
         "noProjectsMessage": "No projects are currently available. Please check back later.",
         "backtoProjects": "Back to Projects"
 
+    },
+    "BookmarksPage": {
+        "title": "Bookmarks",
+        "subtitle": "A collection of my favorite resources",
+        "noBookmarksMessage": "No bookmarks are currently available. Please check back later."
     }
 }

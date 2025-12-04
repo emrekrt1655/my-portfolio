@@ -113,5 +113,10 @@
     "subtitle": "Eine Auswahl meiner Arbeiten",
     "noProjectsMessage": "Derzeit sind keine Projekte verfügbar. Bitte schauen Sie später wieder vorbei.",
     "backtoProjects": "Zurück zu den Projekten"
-  }
+  },
+  "BookmarksPage": {
+    "title": "Lesezeichen",
+    "subtitle": "Gespeicherte Projekte und Ressourcen",
+    "noBookmarksMessage": "Sie haben noch keine Lesezeichen hinzugefügt."
+  } 
 }
