@@ -14,6 +14,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { techStack } from "../constants/techStack";
 
 const Hero = () => {
   const t = useTranslations("Components.Hero");
@@ -41,9 +42,14 @@ const Hero = () => {
       </Link>
 
       <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-3 transition-colors duration-300">
-        {t("greeting")} <span className="text-indigo-600 dark:text-indigo-400">{t("name")}</span>
+        {t("greeting")}{" "}
+        <span className="text-indigo-600 dark:text-indigo-400">
+          {t("name")}
+        </span>
       </h1>
-      <h2 className="text-2xl md:text-3xl text-gray-700 dark:text-gray-300 mb-5 transition-colors duration-300">{t("title")}</h2>
+      <h2 className="text-2xl md:text-3xl text-gray-700 dark:text-gray-300 mb-5 transition-colors duration-300">
+        {t("title")}
+      </h2>
 
       <p className="max-w-2xl text-gray-600 dark:text-gray-400 mb-8 leading-relaxed transition-colors duration-300">
         {t("description")}
@@ -55,27 +61,39 @@ const Hero = () => {
           target="_blank"
           className="hover:scale-110 transition-transform duration-300 cursor-pointer"
         >
-          <Github size={32} className="text-indigo-600 dark:text-indigo-400 transition-colors duration-300" />
+          <Github
+            size={32}
+            className="text-indigo-600 dark:text-indigo-400 transition-colors duration-300"
+          />
         </Link>
         <Link
           href="https://www.linkedin.com/in/emrekrt16/"
           target="_blank"
           className="hover:scale-110 transition-transform duration-300 cursor-pointer"
         >
-          <Linkedin size={32} className="text-indigo-600 dark:text-indigo-400 transition-colors duration-300" />
+          <Linkedin
+            size={32}
+            className="text-indigo-600 dark:text-indigo-400 transition-colors duration-300"
+          />
         </Link>
         <Link
           href="https://medium.com/@emrekrt16"
           target="_blank"
           className="hover:scale-110 transition-transform duration-300 cursor-pointer"
         >
-          <MessageSquareText size={32} className="text-indigo-600 dark:text-indigo-400 transition-colors duration-300" />
+          <MessageSquareText
+            size={32}
+            className="text-indigo-600 dark:text-indigo-400 transition-colors duration-300"
+          />
         </Link>
         <Link
           href="mailto:emrekurtt1655@gmail.com"
           className="hover:scale-110 transition-transform duration-300 cursor-pointer"
         >
-          <Mail size={32} className="text-indigo-600 dark:text-indigo-400 transition-colors duration-300" />
+          <Mail
+            size={32}
+            className="text-indigo-600 dark:text-indigo-400 transition-colors duration-300"
+          />
         </Link>
       </div>
 
@@ -148,33 +166,7 @@ const Hero = () => {
 
       <div className="mt-16 mb-16">
         <div className="flex flex-wrap justify-center gap-5 text-3xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-          {[
-            { class: "devicon-html5-plain colored", name: "HTML5" },
-            { class: "devicon-css3-plain colored", name: "CSS3" },
-            { class: "devicon-react-original colored", name: "React" },
-            { class: "devicon-nextjs-original", name: "Next.js" },
-            { class: "devicon-vuejs-plain colored", name: "Vue.js" },
-            { class: "devicon-stenciljs-original colored", name: "Stencil.js" },
-            { class: "devicon-typescript-plain colored", name: "TypeScript" },
-            {
-              class: "devicon-tailwindcss-plain colored",
-              name: "Tailwind CSS",
-            },
-            { class: "devicon-sass-original colored", name: "SCSS / Sass" },
-            { class: "devicon-nodejs-plain colored", name: "Node.js" },
-            { class: "devicon-express-original colored", name: "Express.js" },
-            { class: "devicon-django-plain colored", name: "Django" },
-            { class: "devicon-symfony-original", name: "Symfony" },
-            { class: "devicon-prisma-original colored", name: "Prisma ORM" },
-            { class: "devicon-mysql-plain colored", name: "MySQL" },
-            { class: "devicon-postgresql-plain colored", name: "PostgreSQL" },
-            { class: "devicon-mongodb-plain colored", name: "MongoDB" },
-            { class: "devicon-docker-plain colored", name: "Docker" },
-            { class: "devicon-gitlab-plain colored", name: "GitLab" },
-            { class: "devicon-jest-plain colored", name: "Jest" },
-            { class: "devicon-cypressio-plain colored", name: "Cypress" },
-            { class: "devicon-playwright-plain colored", name: "Playwright" },
-          ].map((tech) => (
+          {techStack.map((tech) => (
             <div
               key={tech.name}
               className="relative group flex flex-col items-center"

@@ -1,6 +1,12 @@
 "use client";
 
-import { createContext, useReducer, useContext, useEffect, ReactNode } from "react";
+import {
+  createContext,
+  useReducer,
+  useContext,
+  useEffect,
+  ReactNode,
+} from "react";
 
 interface ThemeState {
   theme: "light" | "dark";
@@ -34,9 +40,13 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     if (saved) {
       dispatch({ type: "SET_THEME", payload: saved });
     } else {
-      // Sistem tercihini kontrol et
-      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      dispatch({ type: "SET_THEME", payload: systemPrefersDark ? "dark" : "light" });
+      const systemPrefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      dispatch({
+        type: "SET_THEME",
+        payload: systemPrefersDark ? "dark" : "light",
+      });
     }
   }, []);
 
@@ -45,12 +55,8 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
     if (state.theme === "dark") {
       root.classList.add("dark");
-      root.style.setProperty("--background", "#0a0a0a");
-      root.style.setProperty("--foreground", "#ededed");
     } else {
       root.classList.remove("dark");
-      root.style.setProperty("--background", "#ffffff");
-      root.style.setProperty("--foreground", "#171717");
     }
 
     localStorage.setItem("theme", state.theme);
@@ -65,7 +71,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
 export function useTheme() {
   const context = useContext(ThemeContext);
-  if (!context)
-    throw new Error("useTheme must be used within a ThemeProvider");
+  if (!context) throw new Error("useTheme must be used within a ThemeProvider");
   return context;
 }

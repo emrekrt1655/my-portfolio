@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 import { notFound } from "next/navigation";
 import { getMessages } from "next-intl/server";
 import Navbar from "@/app/components/Navbar";
-import { Footer } from "../components/Footer";
+import Footer from "../components/Footer";
 
 export function generateStaticParams() {
   return [{ locale: "de" }, { locale: "en" }];

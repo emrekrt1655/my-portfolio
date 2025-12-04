@@ -4,12 +4,9 @@ import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { Send, CheckCircle } from "lucide-react";
 import emailjs from "@emailjs/browser";
-import { useTheme } from "@/app/context/ThemeContext";
 
 const EmailBox = () => {
   const t = useTranslations("ContactPage");
-  const { state } = useTheme();
-  const isDark = state.theme === "dark";
 
   const [formData, setFormData] = useState({
     name: "",
@@ -62,37 +59,26 @@ const EmailBox = () => {
 
   return (
     <div
-      className={`rounded-xl shadow-lg p-8 border transition-colors duration-300 ${
-        isDark ? "bg-gray-800 border-gray-700" : "bg-white border-gray-100"
-      }`}
+      className="rounded-xl shadow-lg p-8 border bg-white border-gray-100 
+      dark:bg-gray-800 dark:border-gray-700 
+      transition-colors duration-300"
     >
-      <h2
-        className={`text-3xl font-bold mb-6 transition-colors duration-300 ${
-          isDark ? "text-gray-100" : "text-gray-900"
-        }`}
-      >
+      <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-gray-100 transition-colors duration-300">
         {t("formTitle") || "Send a Message"}
       </h2>
 
       {isSubmitted && (
         <div
-          className={`mb-6 rounded-lg p-4 flex items-center gap-3 transition-colors duration-300 ${
-            isDark
-              ? "bg-green-900/30 border border-green-700"
-              : "bg-green-50 border border-green-200"
-          }`}
+          className="mb-6 rounded-lg p-4 flex items-center gap-3 
+          bg-green-50 border border-green-200 
+          dark:bg-green-900/30 dark:border-green-700 
+          transition-colors duration-300"
         >
           <CheckCircle
-            className={`transition-colors duration-300 ${
-              isDark ? "text-green-400" : "text-green-600"
-            }`}
+            className="text-green-600 dark:text-green-400 transition-colors duration-300"
             size={24}
           />
-          <p
-            className={`font-medium transition-colors duration-300 ${
-              isDark ? "text-green-300" : "text-green-800"
-            }`}
-          >
+          <p className="font-medium text-green-800 dark:text-green-300 transition-colors duration-300">
             {t("successMessage") ||
               "Thank you! Your message has been sent successfully."}
           </p>
@@ -101,17 +87,12 @@ const EmailBox = () => {
 
       {error && (
         <div
-          className={`mb-6 rounded-lg p-4 transition-colors duration-300 ${
-            isDark
-              ? "bg-red-900/30 border border-red-700"
-              : "bg-red-50 border border-red-200"
-          }`}
+          className="mb-6 rounded-lg p-4 
+          bg-red-50 border border-red-200 
+          dark:bg-red-900/30 dark:border-red-700 
+          transition-colors duration-300"
         >
-          <p
-            className={`font-medium transition-colors duration-300 ${
-              isDark ? "text-red-300" : "text-red-800"
-            }`}
-          >
+          <p className="font-medium text-red-800 dark:text-red-300 transition-colors duration-300">
             {error}
           </p>
         </div>
@@ -121,9 +102,7 @@ const EmailBox = () => {
         <div>
           <label
             htmlFor="name"
-            className={`block text-sm font-semibold mb-2 transition-colors duration-300 ${
-              isDark ? "text-gray-300" : "text-gray-700"
-            }`}
+            className="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300 transition-colors duration-300"
           >
             {t("nameLabel") || "Your Name"}{" "}
             <span className="text-red-500">*</span>
@@ -135,11 +114,11 @@ const EmailBox = () => {
             value={formData.name}
             onChange={handleChange}
             required
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 transition-colors ${
-              isDark
-                ? "bg-gray-700 border-gray-600 text-gray-100 placeholder-gray-400 focus:border-indigo-400"
-                : "bg-white border-gray-300 text-gray-900 placeholder-gray-400 focus:border-indigo-500"
-            }`}
+            className="w-full px-4 py-3 border rounded-lg 
+              bg-white border-gray-300 text-gray-900 placeholder-gray-400 
+              focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 
+              dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-400 dark:focus:border-indigo-400 
+              transition-colors"
             placeholder={t("namePlaceholder") || "John Doe"}
           />
         </div>
@@ -147,9 +126,7 @@ const EmailBox = () => {
         <div>
           <label
             htmlFor="email"
-            className={`block text-sm font-semibold mb-2 transition-colors duration-300 ${
-              isDark ? "text-gray-300" : "text-gray-700"
-            }`}
+            className="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300 transition-colors duration-300"
           >
             {t("emailLabel") || "Your Email"}{" "}
             <span className="text-red-500">*</span>
@@ -161,11 +138,11 @@ const EmailBox = () => {
             value={formData.email}
             onChange={handleChange}
             required
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 transition-colors ${
-              isDark
-                ? "bg-gray-700 border-gray-600 text-gray-100 placeholder-gray-400 focus:border-indigo-400"
-                : "bg-white border-gray-300 text-gray-900 placeholder-gray-400 focus:border-indigo-500"
-            }`}
+            className="w-full px-4 py-3 border rounded-lg 
+              bg-white border-gray-300 text-gray-900 placeholder-gray-400 
+              focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 
+              dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-400 dark:focus:border-indigo-400 
+              transition-colors"
             placeholder={t("emailPlaceholder") || "john@example.com"}
           />
         </div>
@@ -173,9 +150,7 @@ const EmailBox = () => {
         <div>
           <label
             htmlFor="subject"
-            className={`block text-sm font-semibold mb-2 transition-colors duration-300 ${
-              isDark ? "text-gray-300" : "text-gray-700"
-            }`}
+            className="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300 transition-colors duration-300"
           >
             {t("subjectLabel") || "Subject"}{" "}
             <span className="text-red-500">*</span>
@@ -187,11 +162,11 @@ const EmailBox = () => {
             value={formData.subject}
             onChange={handleChange}
             required
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 transition-colors ${
-              isDark
-                ? "bg-gray-700 border-gray-600 text-gray-100 placeholder-gray-400 focus:border-indigo-400"
-                : "bg-white border-gray-300 text-gray-900 placeholder-gray-400 focus:border-indigo-500"
-            }`}
+            className="w-full px-4 py-3 border rounded-lg 
+              bg-white border-gray-300 text-gray-900 placeholder-gray-400 
+              focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 
+              dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-400 dark:focus:border-indigo-400 
+              transition-colors"
             placeholder={t("subjectPlaceholder") || "Project Inquiry"}
           />
         </div>
@@ -199,9 +174,7 @@ const EmailBox = () => {
         <div>
           <label
             htmlFor="message"
-            className={`block text-sm font-semibold mb-2 transition-colors duration-300 ${
-              isDark ? "text-gray-300" : "text-gray-700"
-            }`}
+            className="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300 transition-colors duration-300"
           >
             {t("messageLabel") || "Message"}{" "}
             <span className="text-red-500">*</span>
@@ -213,11 +186,11 @@ const EmailBox = () => {
             onChange={handleChange}
             required
             rows={6}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 transition-colors resize-none ${
-              isDark
-                ? "bg-gray-700 border-gray-600 text-gray-100 placeholder-gray-400 focus:border-indigo-400"
-                : "bg-white border-gray-300 text-gray-900 placeholder-gray-400 focus:border-indigo-500"
-            }`}
+            className="w-full px-4 py-3 border rounded-lg resize-none 
+              bg-white border-gray-300 text-gray-900 placeholder-gray-400 
+              focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 
+              dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-400 dark:focus:border-indigo-400 
+              transition-colors"
             placeholder={
               t("messagePlaceholder") || "Tell me about your project..."
             }
@@ -227,11 +200,12 @@ const EmailBox = () => {
         <button
           type="submit"
           disabled={isSubmitting}
-          className={`w-full px-6 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed ${
-            isDark
-              ? "bg-indigo-500 text-white hover:bg-indigo-600"
-              : "bg-indigo-600 text-white hover:bg-indigo-700"
-          }`}
+          className="w-full px-6 py-4 rounded-lg font-semibold 
+            bg-indigo-600 text-white hover:bg-indigo-700 
+            dark:bg-indigo-500 dark:hover:bg-indigo-600 
+            flex items-center justify-center gap-2 
+            disabled:opacity-50 disabled:cursor-not-allowed 
+            transition-colors"
         >
           {isSubmitting ? (
             <>
