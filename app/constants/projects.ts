@@ -27,6 +27,32 @@ const contributionText = {
 
 const projectList: Project[] = [
   {
+    slug: "auto-compare-app",
+    title: "Auto Vergleich App",
+    description: {
+      en: "An intelligent car comparison web application where users can select two cars and choose which aspects they want to compare — such as fuel consumption, insurance, maintenance, and total cost. The app sends a request to an AI model that performs a detailed cost comparison and provides personalized recommendations. Built with Next.js, Supabase for authentication, React Query for data fetching and caching, Tailwind CSS for UI styling, Next Intl for localization, and integrated with a Car API.",
+      de: "Eine intelligente Auto-Vergleichs-App, in der Benutzer zwei Fahrzeuge auswählen und die Vergleichskriterien bestimmen können – wie z. B. Kraftstoffverbrauch, Versicherung, Wartung und Gesamtkosten. Die Anwendung sendet eine Anfrage an ein KI-Modell, das eine detaillierte Kostenanalyse durchführt und personalisierte Empfehlungen gibt. Entwickelt mit Next.js, Supabase für Authentifizierung, React Query für Datenabfragen, Tailwind CSS für das UI, Next Intl für Internationalisierung und integriert mit einer Car API.",
+    },
+    image: "/images/projects/auto-vergleich/auto-vergleich.png",
+    githubUrl: "https://github.com/emrekrt1655/auto-vergleich",
+    liveUrl: "",
+    techStack: [
+      { name: "React", icon: "devicon-react-original colored" },
+      { name: "Next.js", icon: "devicon-nextjs-original" },
+      { name: "TypeScript", icon: "devicon-typescript-plain colored" },
+      { name: "Tailwind CSS", icon: "devicon-tailwindcss-plain colored" },
+      { name: "React Query", icon: "devicon-react-original colored" },
+      { name: "Supabase", icon: "devicon-supabase-plain colored" },
+      { name: "Next Intl", icon: "devicon-nextjs-original" },
+      { name: "OpenAI API", icon: "devicon-openai-plain colored" },
+      { name: "Car API", icon: "devicon-typescript-plain colored" },
+    ],
+    images: [
+      "/images/projects/auto-vergleich/1.png",
+    ],
+    contributionEnabled: true,
+  },
+  {
     slug: "send-to-future",
     title: "Send to Future",
     description: {
