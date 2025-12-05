@@ -17,6 +17,7 @@
             "bookmarks": "Bookmarks",
             "downloadCV": "Preview CV",
             "connectWithMe": "Connect with Me",
+            "blog": "Visit Blog",
             "techStack": "Tech Stack"
         },
         "Footer": {
@@ -121,5 +122,17 @@
         "title": "Bookmarks",
         "subtitle": "A collection of my favorite resources",
         "noBookmarksMessage": "No bookmarks are currently available. Please check back later."
-    }
+    },
+    "BlogPage": {
+    "title": "My Blog",
+    "subtitle": "Thoughts, tutorials, and insights...",
+    "filters": "Filters",
+    "language": "Language",
+    "category": "Category",
+    "all": "All",
+    "showing": "Showing",
+    "result": "result",
+    "results": "results",
+    "noPosts": "No blog posts found"
+  }
 }

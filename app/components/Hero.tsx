@@ -173,6 +173,19 @@ const Hero = () => {
               <span>{t("bookmarks")}</span>
             </div>
           </Link>
+           <Link
+            href={`/${currentLocale}/blog`}
+            className="group relative bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 hover:border-cyan-500 dark:hover:border-cyan-400 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:shadow-xl dark:hover:shadow-cyan-500/30 hover:-translate-y-1 cursor-pointer overflow-hidden"
+          >
+            <div className="absolute inset-0 bg-linear-to-r from-cyan-600 to-blue-600 dark:from-cyan-500 dark:to-blue-500 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+            <div className="relative flex items-center gap-3 text-gray-700 dark:text-gray-300 group-hover:text-white transition-colors duration-300">
+              <FileText
+                size={20}
+                className="group-hover:rotate-12 transition-transform duration-300"
+              />
+              <span>{t("blog")}</span>
+            </div>
+          </Link>
         </div>
 
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-linear-to-r from-transparent via-indigo-500 dark:via-indigo-400 to-transparent rounded-full"></div>
