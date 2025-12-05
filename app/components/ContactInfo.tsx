@@ -51,14 +51,13 @@ const ContactInfo = () => {
     {
       icon: <MessageSquareText size={28} />,
       label: "Medium",
-      href: "https://medium.com/@emrekrt16",
+      href: "https://medium.com/@emrekurtt1655",
       color: "hover:text-green-500",
     },
   ];
 
   return (
     <>
-      {/* Başlık */}
       <div>
         <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-gray-100 transition-colors duration-300">
           {t("contactInfoTitle") || "Contact Information"}
@@ -69,7 +68,6 @@ const ContactInfo = () => {
         </p>
       </div>
 
-      {/* İletişim Bilgileri */}
       <div className="space-y-4">
         {contactInfo.map((info, idx) => (
           <div
@@ -104,7 +102,6 @@ const ContactInfo = () => {
         ))}
       </div>
 
-      {/* Sosyal Linkler */}
       <div
         className="rounded-xl shadow-lg p-6 border bg-white border-gray-100 
         dark:bg-gray-800 dark:border-gray-700 

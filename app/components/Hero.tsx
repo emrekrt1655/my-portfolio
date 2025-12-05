@@ -6,10 +6,11 @@ import {
   Linkedin,
   Mail,
   FileText,
-  MessageSquareText,
   User,
   FolderOpen,
   MessageCircle,
+  Bookmark,
+  BookmarkCheck,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -77,11 +78,11 @@ const Hero = () => {
           />
         </Link>
         <Link
-          href="https://medium.com/@emrekrt16"
+          href="https://medium.com/@emrekurtt1655"
           target="_blank"
           className="hover:scale-110 transition-transform duration-300 cursor-pointer"
         >
-          <MessageSquareText
+          <BookmarkCheck
             size={32}
             className="text-indigo-600 dark:text-indigo-400 transition-colors duration-300"
           />
@@ -157,6 +158,19 @@ const Hero = () => {
                 className="group-hover:rotate-12 transition-transform duration-300"
               />
               <span>{t("connectWithMe")}</span>
+            </div>
+          </Link>
+          <Link
+            href={`/${currentLocale}/bookmarks`}
+            className="group relative bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 hover:border-purple-500 dark:hover:border-purple-400 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:shadow-xl dark:hover:shadow-purple-500/30 hover:-translate-y-1 cursor-pointer overflow-hidden"
+          >
+            <div className="absolute inset-0 bg-linear-to-r from-purple-600 to-pink-600 dark:from-purple-500 dark:to-pink-500 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+            <div className="relative flex items-center gap-3 text-gray-700 dark:text-gray-300 group-hover:text-white transition-colors duration-300">
+              <Bookmark
+                size={20}
+                className="group-hover:rotate-12 transition-transform duration-300"
+              />
+              <span>{t("bookmarks")}</span>
             </div>
           </Link>
         </div>

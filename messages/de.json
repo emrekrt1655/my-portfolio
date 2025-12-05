@@ -4,6 +4,7 @@
       "Home": "Startseite",
       "About": "Über mich",
       "Projects": "Projekte",
+      "Bookmarks": "Lesezeichen",
       "Contact": "Kontakt"
     },
     "Hero": {
@@ -12,6 +13,7 @@
       "title": "Frontend-orientierter Full-Stack-Entwickler",
       "description": "Ich entwickle skalierbare, wartbare und benutzerzentrierte Webanwendungen mit modernen Technologien wie React, Next.js und Vue. Leidenschaftlich für sauberen Code, Performance und intuitives Design.",
       "viewProjects": "Projekte ansehen",
+      "bookmarks": "Lesezeichen",
       "aboutMe": "Über mich",
       "downloadCV": "Lebenslauf ansehen",
       "connectWithMe": "Verbinde dich mit mir",
