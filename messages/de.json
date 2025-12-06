@@ -5,7 +5,8 @@
       "About": "Über mich",
       "Projects": "Projekte",
       "Bookmarks": "Lesezeichen",
-      "Contact": "Kontakt"
+      "Contact": "Kontakt",
+      "Blog": "Blog"
     },
     "Hero": {
       "greeting": "Hallo, ich bin",
@@ -17,6 +18,7 @@
       "aboutMe": "Über mich",
       "downloadCV": "Lebenslauf ansehen",
       "connectWithMe": "Verbinde dich mit mir",
+      "blog": "Blog besuchen",
       "techStack": "Technologie-Stack"
     },
     "Footer": {
@@ -120,5 +122,21 @@
     "title": "Lesezeichen",
     "subtitle": "Gespeicherte Projekte und Ressourcen",
     "noBookmarksMessage": "Sie haben noch keine Lesezeichen hinzugefügt."
-  } 
+  },
+  "BlogPage": {
+    "title": "Blog",
+    "subtitle": "Meine neuesten Artikel und Gedanken",
+    "filters": "Filter",
+    "language": "Sprache",
+    "category": "Kategorie",
+    "all": "Alle",
+    "showing": "Zeige",
+    "result": "Ergebnis",
+    "results": "Ergebnisse",
+    "noPostsMessage": "Derzeit sind keine Blogbeiträge verfügbar. Bitte schauen Sie später wieder vorbei.",
+    "backToBlog": "Zurück zum Blog",
+    "minRead": "Min. Lesezeit",
+    "relatedPosts": "Verwandte Beiträge",
+    "sharePost": "Diesen Beitrag teilen"
+  }
 }
