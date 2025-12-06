@@ -5,7 +5,8 @@
             "About": "About",
             "Projects": "Projects",
             "Bookmarks": "Bookmarks",
-            "Contact": "Contact"
+            "Contact": "Contact",
+            "Blog": "Blog"
         },
         "Hero": {
             "greeting": "Hi, I'm",
@@ -116,7 +117,6 @@
         "subtitle": "A selection of my work",
         "noProjectsMessage": "No projects are currently available. Please check back later.",
         "backtoProjects": "Back to Projects"
-
     },
     "BookmarksPage": {
         "title": "Bookmarks",
@@ -124,15 +124,19 @@
         "noBookmarksMessage": "No bookmarks are currently available. Please check back later."
     },
     "BlogPage": {
-    "title": "My Blog",
-    "subtitle": "Thoughts, tutorials, and insights...",
-    "filters": "Filters",
-    "language": "Language",
-    "category": "Category",
-    "all": "All",
-    "showing": "Showing",
-    "result": "result",
-    "results": "results",
-    "noPosts": "No blog posts found"
-  }
+        "title": "My Blog",
+        "subtitle": "Thoughts, tutorials, and insights...",
+        "filters": "Filters",
+        "language": "Language",
+        "category": "Category",
+        "all": "All",
+        "showing": "Showing",
+        "result": "result",
+        "results": "results",
+        "noPosts": "No blog posts found",
+        "backToBlog": "Back to Blog",
+        "minRead": "min read",
+        "relatedPosts": "Related Posts",
+        "sharePost": "Share this post"
+    }
 }

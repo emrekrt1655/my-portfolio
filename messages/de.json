@@ -5,7 +5,8 @@
       "About": "Über mich",
       "Projects": "Projekte",
       "Bookmarks": "Lesezeichen",
-      "Contact": "Kontakt"
+      "Contact": "Kontakt",
+      "Blog": "Blog"
     },
     "Hero": {
       "greeting": "Hallo, ich bin",
@@ -132,6 +133,10 @@
     "showing": "Zeige",
     "result": "Ergebnis",
     "results": "Ergebnisse",
-    "noPostsMessage": "Derzeit sind keine Blogbeiträge verfügbar. Bitte schauen Sie später wieder vorbei."
+    "noPostsMessage": "Derzeit sind keine Blogbeiträge verfügbar. Bitte schauen Sie später wieder vorbei.",
+    "backToBlog": "Zurück zum Blog",
+    "minRead": "Min. Lesezeit",
+    "relatedPosts": "Verwandte Beiträge",
+    "sharePost": "Diesen Beitrag teilen"
   }
 }

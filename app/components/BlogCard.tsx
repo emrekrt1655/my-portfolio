@@ -8,7 +8,9 @@ interface BlogCardProps {
   image: string;
   slug: string;
   language: string;
+  languageColor: string;
   category: string;
+  categoryColor: string;
   excerpt?: string;
   date: string;
 }
@@ -18,25 +20,14 @@ const BlogCard = ({
   image,
   slug,
   language,
+  languageColor,
   category,
+  categoryColor,
   excerpt,
   date,
 }: BlogCardProps) => {
   const pathname = usePathname();
   const currentLocale = pathname.split("/")[1] || "en";
-
-  const languageColors: Record<string, string> = {
-    en: "bg-blue-500 dark:bg-blue-400",
-    de: "bg-yellow-500 dark:bg-yellow-400",
-    tr: "bg-red-500 dark:bg-red-400",
-  };
-
-  const categoryColors: Record<string, string> = {
-    tutorial: "bg-green-500 dark:bg-green-400",
-    opinion: "bg-purple-500 dark:bg-purple-400",
-    news: "bg-orange-500 dark:bg-orange-400",
-    guide: "bg-cyan-500 dark:bg-cyan-400",
-  };
 
   return (
     <Link
@@ -53,7 +44,7 @@ const BlogCard = ({
         <div className="absolute top-3 left-3 flex gap-2">
           <span
             className={`${
-              languageColors[language] || "bg-gray-500"
+              languageColor || "bg-gray-500"
             } text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1 shadow-lg`}
           >
             <Globe size={12} />
@@ -61,7 +52,7 @@ const BlogCard = ({
           </span>
           <span
             className={`${
-              categoryColors[category] || "bg-gray-500"
+              categoryColor || "bg-gray-500"
             } text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1 shadow-lg`}
           >
             <Tag size={12} />

@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import BlogCard from "@/app/components/BlogCard";
-import { BookOpen, Filter } from "lucide-react";
+import { BookOpen } from "lucide-react";
 import { blogs } from "@/app/constants/blogs";
 
 const BlogPage = () => {
@@ -11,11 +11,9 @@ const BlogPage = () => {
   const [selectedLanguage, setSelectedLanguage] = useState<string>("all");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
-  // Benzersiz dilleri ve kategorileri al
-  const languages = ["all", ...new Set(blogs.map((blog) => blog.language))];
+  const languages = ["all", ...new Set(blogs.map((blog) => blog.language, ))];
   const categories = ["all", ...new Set(blogs.map((blog) => blog.category))];
 
-  // Bloglari filtrele
   const filteredBlogs = blogs.filter((blog) => {
     const languageMatch =
       selectedLanguage === "all" || blog.language === selectedLanguage;
@@ -43,17 +41,8 @@ const BlogPage = () => {
           </p>
         </div>
 
-        {/* Filter Section */}
-        <div className="mb-12 bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border-2 border-gray-200 dark:border-gray-700 transition-colors duration-300">
-          <div className="flex items-center gap-2 mb-4">
-            <Filter className="text-indigo-600 dark:text-indigo-400" size={24} />
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
-              {t("filters") || "Filters"}
-            </h3>
-          </div>
-
+        <div className="mb-12 rounded-2xl p-6 shadow-lg border-2 border-gray-200 dark:border-gray-700 transition-colors duration-300">
           <div className="flex flex-col md:flex-row gap-6">
-            {/* Language Filter */}
             <div className="flex-1">
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 {t("language") || "Language"}
@@ -69,15 +58,12 @@ const BlogPage = () => {
                         : "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600"
                     }`}
                   >
-                    {lang === "all"
-                      ? t("all") || "All"
-                      : lang.toUpperCase()}
+                    {lang === "all" ? t("all") || "All" : lang.toUpperCase()}
                   </button>
                 ))}
               </div>
             </div>
 
-            {/* Category Filter */}
             <div className="flex-1">
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 {t("category") || "Category"}
@@ -102,7 +88,6 @@ const BlogPage = () => {
             </div>
           </div>
 
-          {/* Results Count */}
           <div className="mt-4 text-sm text-gray-600 dark:text-gray-400">
             {t("showing") || "Showing"} {filteredBlogs.length}{" "}
             {filteredBlogs.length === 1
@@ -111,7 +96,6 @@ const BlogPage = () => {
           </div>
         </div>
 
-        {/* Blog Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredBlogs.map((blog) => (
             <BlogCard
@@ -120,6 +104,8 @@ const BlogPage = () => {
               image={blog.image}
               slug={blog.slug}
               language={blog.language}
+              categoryColor={blog.categoryColor}
+              languageColor={blog.languageColor}
               category={blog.category}
               excerpt={blog.excerpt}
               date={blog.date}
@@ -127,7 +113,6 @@ const BlogPage = () => {
           ))}
         </div>
 
-        {/* Empty State */}
         {filteredBlogs.length === 0 && (
           <div className="text-center py-20">
             <BookOpen
@@ -135,7 +120,8 @@ const BlogPage = () => {
               size={64}
             />
             <p className="text-xl text-gray-500 dark:text-gray-400 transition-colors duration-300">
-              {t("noPosts") || "No blog posts found. Try adjusting your filters."}
+              {t("noPosts") ||
+                "No blog posts found. Try adjusting your filters."}
             </p>
           </div>
         )}
