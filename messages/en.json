@@ -123,7 +123,8 @@
         "title": "Projects",
         "subtitle": "A selection of my work",
         "noProjectsMessage": "No projects are currently available. Please check back later.",
-        "backtoProjects": "Back to Projects"
+        "backtoProjects": "Back to Projects",
+        "filterByTechStack": "Main Tech Stack"
     },
     "BookmarksPage": {
         "title": "Bookmarks",

@@ -8,6 +8,7 @@ export interface Project {
   image: string;
   githubUrl?: string;
   liveUrl?: string;
+  mainTechStack: string[];
   techStack: {
     name: string;
     icon: string;
@@ -36,6 +37,7 @@ const projectList: Project[] = [
     image: "/images/projects/auto-vergleich/auto-vergleich.png",
     githubUrl: "https://github.com/emrekrt1655/auto-vergleich",
     liveUrl: "",
+    mainTechStack: ["Next.js","TypeScript", "React-Query", "TailwindCSS", "AI-Powered"],
     techStack: [
       { name: "React", icon: "devicon-react-original colored" },
       { name: "Next.js", icon: "devicon-nextjs-original" },
@@ -62,6 +64,7 @@ const projectList: Project[] = [
     image: "/images/projects/sendtofuture/paperplan.jpg",
     githubUrl: "https://github.com/emrekrt1655/sendtofuture",
     liveUrl: "",
+    mainTechStack: ["Next.js","TypeScript", "TailwindCSS"],
     techStack: [
       { name: "React", icon: "devicon-react-original colored" },
       { name: "Next.js", icon: "devicon-nextjs-original" },
@@ -86,6 +89,7 @@ const projectList: Project[] = [
     },
     image: "/images/projects/timesheet/timesheet.png",
     githubUrl: "https://github.com/emrekrt1655/funded-timesheet",
+    mainTechStack: ["Next.js","TypeScript", "TailwindCSS", "Symfony", "Docker"],
     techStack: [
       { name: "React", icon: "devicon-react-original colored" },
       { name: "Next.js", icon: "devicon-nextjs-original" },
@@ -116,6 +120,7 @@ const projectList: Project[] = [
     image: "/images/projects/ai-chatbot/chatbot.png",
     githubUrl: "https://github.com/emrekrt1655/chatbot-next",
     liveUrl: "",
+    mainTechStack: ["Next.js","TypeScript", "TailwindCSS", "AI-Powered"],
     techStack: [
       { name: "React", icon: "devicon-react-original colored" },
       { name: "Next.js", icon: "devicon-nextjs-original" },
