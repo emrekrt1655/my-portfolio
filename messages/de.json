@@ -44,6 +44,13 @@
         "description": "Entwicklung moderner Webanwendungen mit React.js, Next.js, Vue.js, Stencil.js. Wiederverwendbare Komponenten erstellt, Performance mit useMemo und useCallback optimiert, Backend-APIs mit Django und Symfony integriert und automatisierte Tests mit Playwright implementiert."
       },
       {
+        "role": "Full-Stack-Entwickler",
+        "company": "Lorem Minds",
+        "location": "Remote",
+        "duration": "Juli 2022 – Januar 2023",
+        "description": "Mitwirkung an einem Open-Source-Social-Media-Projekt, in dem Nutzer ihre Meinungen zu bestimmten Themen teilen konnten. Entwicklung und Wartung von Full-Stack-Funktionen mit React, Node.js (Express) und TypeScript. Implementierung einer modularen SCSS-Architektur, Durchführung von End-to-End-Tests mit Cypress und Optimierung der Frontend-Performance."
+      },
+      {
         "role": "Softwareentwickler",
         "company": "Milon Industries GmbH",
         "location": "Augsburg",

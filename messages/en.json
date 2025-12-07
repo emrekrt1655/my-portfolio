@@ -44,6 +44,13 @@
                 "description": "Architected and developed modern web applications utilizing React.js, Next.js, Vue.js, Stencil.js. Built reusable components, optimized performance with useMemo and useCallback, integrated backend APIs with Django and Symfony, and implemented automated tests using Playwright."
             },
             {
+                "role": "Full Stack Developer",
+                "company": "Lorem Minds",
+                "location": "Remote",
+                "duration": "July 2022 – January 2023",
+                "description": "Contributed to an open-source social media platform where users shared ideas on specific topics. Developed and maintained full-stack features using React, Node.js with Express, and TypeScript. Implemented modular SCSS architecture, performed E2E testing with Cypress, and optimized frontend performance."
+            },
+            {
                 "role": "Software Developer",
                 "company": "Milon Industries GmbH",
                 "location": "Augsburg",
