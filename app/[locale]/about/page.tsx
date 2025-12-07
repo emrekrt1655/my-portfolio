@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { skillCategories } from "@/app/constants/skillCategories";
 import { Education, WorkExperience } from "@/types/about";
+import PhotoAlbum from "@/app/components/PhotoAlbum";
 
 const AboutPage = () => {
   const t = useTranslations("AboutPage");
@@ -183,6 +184,14 @@ const AboutPage = () => {
             <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300 transition-colors duration-300">
               {t("interests")}
             </p>
+          </div>
+        </section>
+        <section>
+          <div className="flex items-center gap-3 mb-8">
+            
+          </div>
+          <div className="rounded-xl shadow-lg p-8 border bg-white border-indigo-100 dark:bg-gray-800 dark:border-gray-700 transition-colors duration-300">
+            <PhotoAlbum />
           </div>
         </section>
       </div>
