@@ -117,7 +117,8 @@
     "messagePlaceholder": "Erzählen Sie mir von Ihrem Projekt...",
     "sendButton": "Nachricht senden",
     "sendingButton": "Wird gesendet...",
-    "successMessage": "Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet."
+    "successMessage": "Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.",
+    "bookTime": "Bitte buchen Sie einen Termin."
   },
   "ProjectsPage": {
     "title": "Projekte",

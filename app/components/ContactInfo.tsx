@@ -7,6 +7,7 @@ import {
   Github,
   Linkedin,
   MessageSquareText,
+  Calendar,
 } from "lucide-react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
@@ -16,22 +17,49 @@ const ContactInfo = () => {
 
   const contactInfo = [
     {
-      icon: <Mail className="text-indigo-600 dark:text-indigo-400 transition-colors duration-300" size={24} />,
+      icon: (
+        <Mail
+          className="text-indigo-600 dark:text-indigo-400 transition-colors duration-300"
+          size={24}
+        />
+      ),
       label: "Email",
       value: "emrekurtt1655@gmail.com",
       href: "mailto:emrekurtt1655@gmail.com",
     },
     {
-      icon: <Phone className="text-indigo-600 dark:text-indigo-400 transition-colors duration-300" size={24} />,
+      icon: (
+        <Phone
+          className="text-indigo-600 dark:text-indigo-400 transition-colors duration-300"
+          size={24}
+        />
+      ),
       label: "Phone",
       value: "+49 176 83186764",
       href: "tel:+4917683186764",
     },
     {
-      icon: <MapPin className="text-indigo-600 dark:text-indigo-400 transition-colors duration-300" size={24} />,
+      icon: (
+        <MapPin
+          className="text-indigo-600 dark:text-indigo-400 transition-colors duration-300"
+          size={24}
+        />
+      ),
       label: "Location",
       value: "Ingolstadt 85053, Germany",
       href: null,
+    },
+    {
+      icon: (
+        <Calendar
+          size={24}
+          className="text-indigo-600 dark:text-indigo-400 transition-colors duration-300"
+        />
+      ),
+      label: "Calendy",
+      value: `${t("bookTime")}`,
+      href: "https://calendly.com/emrekurtt1655/30min",
+      color: "hover:text-blue-600",
     },
   ];
 
@@ -40,19 +68,19 @@ const ContactInfo = () => {
       icon: <Github size={28} />,
       label: "GitHub",
       href: "https://github.com/emrekrt1655",
-      color: "hover:text-gray-900 dark:hover:text-gray-300",
+      color: "text-indigo-600 dark:text-indigo-400 transition-colors duration-300 hover:text-gray-900 dark:hover:text-gray-300",
     },
     {
       icon: <Linkedin size={28} />,
       label: "LinkedIn",
       href: "https://www.linkedin.com/in/emrekrt16/",
-      color: "hover:text-blue-500",
+      color: "text-indigo-600 dark:text-indigo-400 transition-colors duration-300 hover:text-blue-500",
     },
     {
       icon: <MessageSquareText size={28} />,
       label: "Medium",
       href: "https://medium.com/@emrekurtt1655",
-      color: "hover:text-green-500",
+      color: "text-indigo-600 dark:text-indigo-400 transition-colors duration-300 hover:text-green-500",
     },
   ];
 
